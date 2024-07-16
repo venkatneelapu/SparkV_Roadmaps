@@ -18,7 +18,7 @@
         /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     }
 
-    body {
+    .body {
         background-image: radial-gradient(#0d131b, #1F2833, #0d131b);
         display: flex;
         align-items: center;
@@ -26,6 +26,7 @@
         justify-content: center;
         flex-direction: column;
         position: relative;
+        height: 100vh;
     }
 
     h1 {
@@ -45,6 +46,7 @@
         overflow-wrap: break-word;
         animation-name: card;
         animation-duration: 8s;
+        animation-fill-mode: forwards;
         transition: ease;
     }
     p{
@@ -70,6 +72,7 @@
         animation-name: btn;
         /* animation-delay:5s; */
         animation-duration: 5s;
+        animation-fill-mode: forwards;
     }
     button:hover {
         background-color: #66FCF1 !important;
@@ -92,6 +95,7 @@
 </style>
 
 <body>
+    <div class="body">
     <div class="page container-fluid mt-3 pt-3" style="width: 80%; height: 100vh">
         <h1 class="display-5 mt-5">Welcome to SparkV</h1>
         <h3 class="text-light"><i>Expertly Crafted Roadmaps</i></h3>
@@ -139,6 +143,7 @@
             </footer>
         </section>
 
+    </div>
     </div>
 </body>
 </html>

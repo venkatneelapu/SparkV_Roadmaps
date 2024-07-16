@@ -1,2 +1,0 @@
-MongoDB can be connected by Cluster  OR by Shell
-

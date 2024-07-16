@@ -1,0 +1,265 @@
+#nav_img{
+	max-height: 3.5rem;
+	max-width: 20rem;
+}
+
+.navbar {
+  background-image: linear-gradient(#19191a,#19191a,transparent);
+}
+
+.opt{
+  background-color: transparent;
+}
+
+.btn {
+	border: none;
+}
+
+.op:hover {
+	background-color: rgba(255, 255, 255, 0.195);
+}
+
+/* Hamburger */
+
+.hamburger {
+	padding-top: 0.5cm;
+	display: block;
+	width: 30px;
+	height: 20px;
+	position: relative;
+	cursor: pointer;
+}
+
+.bar {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #e8ebebaa;
+	position: absolute;
+	transition: transform 0.3s ease;
+}
+
+.bar:nth-child(1) {
+	top: 10%;
+}
+
+.bar:nth-child(2) {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.bar:nth-child(3) {
+	bottom: 10%;
+}
+
+#toggle {
+	display: none;
+}
+
+#toggle:checked + .hamburger .bar:nth-child(1) {
+	transform: translateY(7px) rotate(45deg);
+}
+
+#toggle:checked + .hamburger .bar:nth-child(2) {
+	opacity: 0;
+}
+
+#toggle:checked + .hamburger .bar:nth-child(3) {
+	transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu {
+	position: fixed;
+	top: 0%;
+	z-index: 1000 !important;
+	right: -400px;
+	width: 400px;
+	height: 100%;
+	margin-top: 3.5rem;
+	transition: right 0.3s ease;
+  opacity: 0;
+	background-color: #44555dbd !important;
+  padding-top: 50px;
+}
+
+#toggle:checked + .hamburger + .menu {
+	right: 0;
+  opacity: 1;
+}
+
+#toggle:checked ~ .navbarpage {
+  overflow: hidden;
+  position: relative;
+}
+
+.menu .side_menu {
+	list-style: none;
+	padding: 0;
+}
+
+.menu li {
+	border-bottom: 1px solid #3a3838b2;
+}
+
+.menu a {
+	color: #ebeaeadd;
+	text-decoration: none;
+	padding: 10px;
+	display: block;
+}
+
+.side_menu {
+	background-color: #424040ad;
+}
+.menu a:hover {
+	background-color: #cfc6c6b6;
+}
+
+/*****************************************************************/
+
+/* NavBar Element Font*/
+
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&display=swap");
+
+.div1 a {
+	white-space: nowrap;
+	font-family: "Piazzolla", serif;
+	padding-top: 10px;
+}
+
+.op li {
+	font-family: poppins;
+}
+
+/**************************************************************/
+
+/* Ai Button */
+
+#navbar_ai{
+  display: block;
+  font-size: 1.9em;
+  animation: rotate 2s linear infinite;
+  transform-origin: center;
+  margin-top: -12px;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+/* NavBar Element design */
+
+div.div1 a {
+	position: relative;
+	z-index: 0;
+	cursor: pointer;
+}
+
+/* Border X get width  */
+div.borderXwidth a:before,
+div.borderXwidth a:after {
+	position: absolute;
+	opacity: 10;
+	width: 0%;
+	height: 1.8px;
+	content: "";
+	background: #ffffff75;
+	transition: all 0.3s;
+}
+
+div.borderXwidth a:before {
+	left: 0px;
+	top: 0px;
+	height: 3px;
+}
+
+div.borderXwidth a:after {
+	right: 0px;
+	bottom: 0px;
+	height: 3px;
+}
+
+div.borderXwidth a:hover:before,
+div.borderXwidth a:hover:after {
+	opacity: 1;
+	width: 90%;
+}
+
+/*****/
+
+/* Responsiveness */
+
+.hamburger {display: none;}
+
+/* navbar options */
+
+#opt1,#opt2,#opt3,#opt4,#opt5 {display: block;}
+
+#op1,#op2,#op3,#op4,#op5 {display: none;}
+
+@media only screen and (max-width: 740px) {
+	#opt3 {display: none;}
+	#op3 {display: block;}
+	.menu li {border-bottom: none;}
+  .hamburger {display: inline-block;}
+}
+
+@media only screen and (max-width: 640px) {
+	#opt1 {display: none;}
+	#op1 {display: block;}
+	.menu li {border-bottom: none;}
+}
+
+@media only screen and (max-width: 540px) {
+	#opt2 {display: none;}
+	#op2 {display: block;}
+	.menu li {border-bottom: none;}
+}
+
+@media only screen and (max-width: 440px) {
+	#opt4 {display: none;}
+	#op4 {display: block;}
+	.menu li {border-bottom: none;}
+}
+@media only screen and (max-width: 370px) {
+	#opt5 {display: none;}
+	#op5 {display: block;}
+	.menu li {border-bottom: none;}
+}
+
+/***************/
+
+/* Modal */
+
+.modal-content{
+	background-image: radial-gradient( #0d131b,#1F2833,#1F2833 );
+}
+
+.modal-title{
+	color:#66FCF1;
+}
+
+.custom-close-btn{
+	color: white;
+}
+
+#out_button:hover{
+	background-color:#ff4d4d;
+	color: rgb(255, 255, 255);
+	font-style: italic;
+	padding-left:13.5px;
+	padding-right:13.9px;
+}
+
+#cancel_button:hover{
+	background-color:#66FCF1;
+	color: rgba(29, 29, 29, 0.676);
+	font-style:italic;
+}
+.bi{
+	color:#66FCF1;
+	padding-top: 2px;
+	padding-left: 10px;
+	font-size: xx-large;
+}
